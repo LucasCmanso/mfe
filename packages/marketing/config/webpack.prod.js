@@ -14,9 +14,12 @@ const prodConfig = {
             name: 'marketing',
             filename: 'remoteEntry.js',
             exposes: {
-                '.MarketingApp': './src/bootstrap'
+                './MarketingApp': './src/bootstrap'
             },
             shared: packageJson.dependencies
+        }),
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
         })
     ]
 };
